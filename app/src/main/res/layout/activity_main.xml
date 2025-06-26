@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/titlelabel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Sensor Data Collector App" />
+
+        <EditText
+            android:id="@+id/patientInput"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="patient id"
+            android:inputType="number"
+            android:text="0" />
+
+        <EditText
+            android:id="@+id/experimentInput"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="experiment id"
+            android:inputType="number"
+            android:text="0" />
+
+        <EditText
+            android:id="@+id/serverInput"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="server ip"
+            android:inputType="text"
+            android:text="10.0.0.26:8080" />
+
+        <Spinner
+            android:id="@+id/sensorspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"/>
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:onClick="addButtonClicked"/>
+
+        <Button
+            android:id="@+id/resetbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:onClick="resetButtonClicked"/>
+
+        <Button
+            android:id="@+id/startbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:onClick="startButtonClicked"/>
+
+        <TextView
+            android:id="@+id/statusLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/selectedsensors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(placeholder)" />
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
