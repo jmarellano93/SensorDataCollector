@@ -1,23 +1,37 @@
+// File: app/src/main/java/ch/fhnw/sensordatacollector/DataObject.java
 package ch.fhnw.sensordatacollector;
-
 import java.util.List;
 
 public class DataObject {
+    // No changes to id, device, sensorId, data, timestamp, accuracy, sensorType
 
-    /**
-     * some comment about this varaible.
-     */
+    private String experimentId;
+    private String patientId;
+
+    // Getter and Setter for experimentId
+    public String getExperimentId() {
+        return experimentId;
+    }
+    public void setExperimentId(String experimentId) {
+        this.experimentId = experimentId;
+    }
+
+    // Getter and Setter for patientId
+    public String getPatientId() {
+        return patientId;
+    }
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
+    // other getters and setters remain the same
     private Long id;
-
     private String device;
-    private Integer experimentId;
-    private Integer patientId;
     private String sensorId;
     private List<Float> data;
     private Long timestamp;
     private Integer accuracy;
     private int sensorType;
-
     public int getSensorType() {
         return sensorType;
     }
@@ -72,21 +86,5 @@ public class DataObject {
 
     public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
-    }
-
-    public Integer getExperimentId() {
-        return experimentId;
-    }
-
-    public void setExperimentId(Integer experimentId) {
-        this.experimentId = experimentId;
-    }
-
-    public Integer getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(Integer patientId) {
-        this.patientId = patientId;
     }
 }

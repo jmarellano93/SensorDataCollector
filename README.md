@@ -1,6 +1,8 @@
 # SensorDataCollectorApp
 
 
+### Android Studio Github Repository: https://github.com/jmarellano93/SensorDataCollector
+
 
 ## Getting started
 
